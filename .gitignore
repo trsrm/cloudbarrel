@@ -1,0 +1,5 @@
+.DS_Store
+
+# Local device exports contain live credentials, session tokens, and private state.
+/references/private/*
+!/references/private/README.md
