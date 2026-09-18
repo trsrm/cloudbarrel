@@ -1,6 +1,6 @@
 # Requirements
 
-This document defines the initial CloudBarrel product requirements for contributors and reviewers.
+This document defines the initial CloudBarrel requirements for contributors and reviewers.
 
 ## Goals
 

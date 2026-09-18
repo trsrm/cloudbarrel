@@ -50,7 +50,7 @@ This roadmap orders work by risk for the CloudBarrel project. A phase ends when 
 - Publish versioned releases to a small group of known users.
 - Record each case that requires a terminal, manual repair, or maintainer help.
 
-**Stop condition:** a new user can install, configure one Supported Source, receive an actionable failure alert, and restore a file from documented steps; repeated manual interventions are recorded for later product decisions.
+**Stop condition:** a new user can install, configure one Supported Source, receive an actionable failure alert, and restore a file from documented steps; repeated manual interventions are recorded for later design decisions.
 
 ## Phase 5 — platform integrations
 

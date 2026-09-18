@@ -8,9 +8,9 @@ Build an open-source, self-hosted backup platform that keeps independent local c
 
 The primary threat is loss of cloud access through account lockout, deletion, provider error, or user error. A backup must remain usable without access to the original cloud account.
 
-The product promise is: CloudBarrel runs automatically and tells the user when a specific action is required. It must reduce attention spent on setup, authentication, diagnosis, retries, and restore without hiding uncertainty behind one generic success state.
+The promise is: CloudBarrel runs automatically and tells the user when a specific action is required. It must reduce attention spent on setup, authentication, diagnosis, retries, and restore without hiding uncertainty behind one generic success state.
 
-## Product decision
+## Scope decision
 
 CloudBarrel is a portable backup core with thin platform integrations.
 

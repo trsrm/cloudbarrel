@@ -18,7 +18,7 @@ CloudBarrel is set up once, copies data to storage the user controls, and proves
 
 The reference setup covers Google Drive, iCloud Drive, and iCloud Photos. It uses proven transfer tools such as `rclone` rather than implementing another sync engine.
 
-## Product shape
+## Project shape
 
 ```text
 Consumer clouds
@@ -40,13 +40,13 @@ The core stays independent of any NAS dashboard. Platform integrations expose th
 
 The working reference implementation runs on an ASUS ZenWiFi XT9 with Entware, shell scripts, `rclone`, cron, Healthchecks.io, and an ext4 USB disk. It proved the backup semantics and exposed the limits of running heavy backup work on a router.
 
-Next milestone: migrate the proven workflow to plain Debian or Raspberry Pi OS with native `systemd` supervision. Product code follows after that.
+Next milestone: migrate the proven workflow to plain Debian or Raspberry Pi OS with native `systemd` supervision. Implementation code follows after that.
 
 ## Documentation
 
 - [Chat context](CHAT-CONTEXT.md) — self-contained project handoff for a new AI or human collaborator
 - [Domain language](CONTEXT.md) — canonical project terms
-- [Requirements](docs/requirements.md) — product scope and acceptance conditions
+- [Requirements](docs/requirements.md) — scope and acceptance conditions
 - [Architecture](docs/architecture.md) — core and integration seams
 - [Reliability](docs/reliability.md) — failure model and safeguards
 - [Backup and restore](docs/backup-and-restore.md) — data semantics and recovery expectations
@@ -55,7 +55,7 @@ Next milestone: migrate the proven workflow to plain Debian or Raspberry Pi OS w
 - [Migration to Raspberry Pi](docs/migration-to-pi.md) — safe transition plan
 - [Roadmap](ROADMAP.md) — ordered milestones and stop conditions
 - [Architecture decision](docs/adr/0001-portable-core.md) — why the core stays independent of host platforms
-- [Product boundary decision](docs/adr/0002-open-source-product.md) — why CloudBarrel remains complete without external applications
+- [Boundary decision](docs/adr/0002-independently-usable.md) — why CloudBarrel remains complete without external applications
 
 ## Platforms
 

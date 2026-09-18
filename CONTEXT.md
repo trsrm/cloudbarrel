@@ -1,6 +1,6 @@
 # CloudBarrel domain
 
-CloudBarrel keeps independent, versioned local backups of data held by consumer cloud services. This glossary defines the terms used across product, code, and documentation.
+CloudBarrel keeps independent, versioned local backups of data held by consumer cloud services. This glossary defines the terms used across design, code, and documentation.
 
 ## Language
 
@@ -76,6 +76,6 @@ _Avoid_: Default platform, primary UI
 A best-effort installation on hardware where memory, CPU, operating system, or storage tooling limits supported behavior.
 _Avoid_: Router edition, lite core
 
-**Product**:
-Reserved for the commercial offering built on top of CloudBarrel. CloudBarrel itself is a project, a tool, or a core, never "the product".
-_Avoid_: Using "product" for this repository or its scope
+**CloudBarrel**:
+This repository: the portable backup core, its CLI, and its platform integrations. Call it the project, the tool, or the core.
+_Avoid_: Product, the product, the platform

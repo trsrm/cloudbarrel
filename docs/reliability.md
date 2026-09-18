@@ -36,11 +36,11 @@ CloudBarrel may use the last successful remote file count as an anomaly baseline
 - Make the permitted drop configurable.
 - A baseline is a guardrail, not proof of integrity.
 
-The XT9 prototype uses a 50% floor for Google Drive and iCloud Drive. This is a safe prototype default, not a universal product default.
+The XT9 prototype uses a 50% floor for Google Drive and iCloud Drive. This is a safe prototype default, not a universal default.
 
 ## Retention under pressure
 
-The prototype keeps History for 180 days, protects the newest 30 days, begins emergency cleanup below 15% free space, and aims for 25% free space. Product defaults require validation on larger disks.
+The prototype keeps History for 180 days, protects the newest 30 days, begins emergency cleanup below 15% free space, and aims for 25% free space. Shipped defaults require validation on larger disks.
 
 Cleanup must:
 
