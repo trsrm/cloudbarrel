@@ -60,10 +60,45 @@ This roadmap orders work by risk for the CloudBarrel project. A phase ends when 
 
 **Stop condition:** every integration delegates backup behavior to the same core interface.
 
+## Phase 6 — home-server setup
+
+CloudBarrel remains the backup product. This phase defines the surrounding home-server setup that runs beside it and gives the reference deployment a useful daily role.
+
+### Host profiles
+
+- Raspberry Pi OS or another Debian-compatible host is the reference profile.
+- An Intel NUC or another small x86 host is a supported higher-capacity profile.
+- OpenMediaVault and CasaOS package the same setup behind their host controls.
+- Router-lite remains a constrained profile with lower concurrency and fewer expensive checks.
+
+### Storage and administration
+
+- Mount `SYSTEM` and `BACKUP` filesystems by UUID and keep service ownership explicit.
+- Add `smartmontools` and `smartd` for disk health and failure alerts where the USB bridge exposes SMART data.
+- Use `ncdu` for bounded disk-usage investigation, `screen` for safe maintenance sessions, and `jq` for machine-readable status inspection.
+- Use `rsync` for local maintenance and migration tasks; keep `rclone` for cloud transfer and `rclone check` for scheduled verification jobs.
+- Document users, groups, permissions, log retention, reboot recovery, and free-space thresholds.
+
+### File and media services
+
+- Provide Samba/SMB shares for backup Browse trees, media, and controlled administration paths.
+- Provide DLNA through ReadyMedia/MiniDLNA for simple network playback.
+- Provide a Transmission daemon with its Web UI for downloads, with downloads kept outside the backup namespace.
+- Evaluate Jellyfin as the richer media-library layer after storage, permissions, and resource limits are stable.
+- Keep media indexing, thumbnails, and galleries optional; they must not become backup prerequisites.
+
+### Integration and reliability
+
+- Give backup, downloads, and media services separate identities and directories.
+- Avoid competing heavy disk and network work during backup, Integrity, and Restore windows.
+- Expose service health, SMART state, free space, backup Runs, and Action required events through the reference status surface and host integrations.
+- Verify SMB access, DLNA discovery, Transmission resume, `rclone check`, SMART alerts, and full reboot recovery on each host profile.
+
+**Stop condition:** a documented Pi/NUC setup can run CloudBarrel, expose the intended SMB/DLNA/Transmission services, recover after reboot, and show actionable storage and backup health without making any media service part of backup correctness.
+
 ## Deferred
 
 - Cockpit integration
 - Thumbnails or photo gallery
-- Turnkey Transmission, DLNA, or Jellyfin bundles
 - Multi-disk replication and RAID guidance
 - Provider connectors beyond the initial three
