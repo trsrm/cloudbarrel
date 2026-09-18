@@ -12,31 +12,11 @@ CloudBarrel is currently a documentation-first project. There is no installable 
 
 ## Why it exists
 
-Three failures that already happened, none of them unusual:
+Cloud storage is not a backup. Accounts get locked, sync bugs overwrite files, support does not reply — and one copy, held by someone else, is all that stands between you and losing years of photos. Exporting by hand does not solve it: 700 GB of iCloud Photos is days of supervised downloads, so it never happens.
 
-> My Threads account was locked by mistake. Support sent a data-export link that only works from inside the account I can no longer sign in to. The data is still there. I just cannot reach it.
+CloudBarrel is set up once, copies data to storage the user controls, and proves the copy can be restored.
 
-> The Google Sheet where I track my finances silently reverted to a state from months earlier. No revision history, no explanation. Days of retyping.
-
-> Several years of my childhood photos no longer exist anywhere. There was one copy, and one copy is all it takes.
-
-All three have the same cause: one copy, held by someone else. Accounts get locked, sync bugs overwrite files, support does not reply. A few lost documents can be retyped. Several years of photos cannot.
-
-Exporting by hand does not solve it. 700 GB of iCloud Photos is days of supervised downloads, so the task stays on the to-do list instead of getting done. CloudBarrel is set up once and then runs on its own.
-
-Cloud storage is not an independent backup. An account can be locked, deleted, corrupted, or made unavailable. CloudBarrel is intended to copy data to storage that the user controls and to prove that the copy can be restored.
-
-The reference setup includes:
-
-- Google Drive
-- iCloud Drive
-- iCloud Photos, including Personal and Shared libraries
-
-iCloud Photos also gets one combined `browse/YYYY/MM/` tree. It contains hard links to the current Personal and Shared files, so users can browse one timeline without duplicating media data.
-
-The project will use proven transfer tools such as `rclone`. It will not implement another sync engine.
-
-A Source becomes publicly supported only after its backup, failure, notification, Integrity, and Restore paths pass the reference deployment acceptance checks. Presence in the reference setup alone is not a support promise.
+The reference setup covers Google Drive, iCloud Drive, and iCloud Photos. It uses proven transfer tools such as `rclone` rather than implementing another sync engine.
 
 ## Product shape
 
@@ -54,15 +34,13 @@ Local disk or NAS storage
 Host integrations: plain Linux · OpenMediaVault · CasaOS · router-lite
 ```
 
-The core must remain independent of any NAS dashboard. Platform integrations expose the same backup behavior through the host's normal controls.
-
-This repository contains all of CloudBarrel, and it is complete on its own. External local applications may use the CloudBarrel interface, but they must not be required for backup correctness or for reading and restoring stored data.
+The core stays independent of any NAS dashboard. Platform integrations expose the same backup behavior through the host's normal controls. This repository contains all of CloudBarrel and is complete on its own.
 
 ## Status
 
-The working reference implementation runs on an ASUS ZenWiFi XT9 with Entware, shell scripts, `rclone`, cron, Healthchecks.io, and an ext4 USB disk. It proved the backup semantics, but it also exposed the limits of running heavy backup work on a router.
+The working reference implementation runs on an ASUS ZenWiFi XT9 with Entware, shell scripts, `rclone`, cron, Healthchecks.io, and an ext4 USB disk. It proved the backup semantics and exposed the limits of running heavy backup work on a router.
 
-The next practical milestone is to migrate the proven workflow to plain Debian or Raspberry Pi OS with native `systemd` supervision. Product code will follow only after that migration shows which interfaces are real.
+Next milestone: migrate the proven workflow to plain Debian or Raspberry Pi OS with native `systemd` supervision. Product code follows after that.
 
 ## Documentation
 
@@ -88,7 +66,7 @@ The next practical milestone is to migrate the proven workflow to plain Debian o
 | [CasaOS and generic Docker](docs/platforms/casaos.md) | Accessible application packaging |
 | [ASUSWRT, OpenWrt, and similar routers](docs/platforms/router.md) | Best-effort constrained deployment |
 
-Media-server functions such as SMB, Transmission, DLNA, and Jellyfin belong to the host platform. CloudBarrel may document compatible deployment recipes, but they are not part of the backup core.
+Media-server functions such as SMB, Transmission, DLNA, and Jellyfin belong to the host platform, not the backup core.
 
 ## Security
 
@@ -96,4 +74,4 @@ Never commit an `rclone.conf`, cloud session, Healthchecks URL, device export, o
 
 ## License
 
-CloudBarrel is licensed under the [Mozilla Public License 2.0](LICENSE).
+[Mozilla Public License 2.0](LICENSE).
