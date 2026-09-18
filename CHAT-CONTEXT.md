@@ -12,7 +12,7 @@ The product promise is: CloudBarrel runs automatically and tells the user when a
 
 ## Product decision
 
-The product is a portable backup core with thin platform integrations.
+CloudBarrel is a portable backup core with thin platform integrations.
 
 - Plain Debian, Ubuntu, or Raspberry Pi OS is the reference deployment.
 - OpenMediaVault may provide the deepest NAS UI integration.
@@ -20,7 +20,7 @@ The product is a portable backup core with thin platform integrations.
 - Router environments are constrained, best-effort deployments.
 - The core must not know how an OMV or CasaOS UI works.
 
-This repository is the complete open-source CloudBarrel product. It includes backup correctness, History, Integrity, Restore, CLI control, machine-readable status, and platform integrations. External local applications may consume the CloudBarrel interface, but they must not be required to read or restore an archive.
+This repository is all of CloudBarrel, and it is complete on its own. It includes backup correctness, History, Integrity, Restore, CLI control, machine-readable status, and platform integrations. External local applications may consume the CloudBarrel interface, but they must not be required to read or restore an archive.
 
 The working name is **CloudBarrel**. The tagline is **Bring your cloud data home.**
 

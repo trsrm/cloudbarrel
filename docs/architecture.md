@@ -72,7 +72,7 @@ It must not implement backup semantics.
 
 ## External application seam
 
-CloudBarrel is the complete open-source backup product. External local applications may consume its interface, but they remain callers at the same seam as other integrations. They do not own backup semantics and cannot be required to read or restore stored data.
+CloudBarrel is complete on its own. External local applications may consume its interface, but they remain callers at the same seam as other integrations. They do not own backup semantics and cannot be required to read or restore stored data.
 
 ### Plain Linux
 

@@ -15,7 +15,7 @@ CloudBarrel must:
 
 ## Open-source guarantees
 
-- This repository contains the complete open-source CloudBarrel product.
+- This repository contains all of CloudBarrel, and it is complete on its own.
 - Backup correctness, History, Integrity, Restore, and access to stored files must not depend on an external application.
 - External local applications may use the CloudBarrel interface.
 - CloudBarrel must remain operable on infrastructure controlled by the user and must not require a vendor cloud service.

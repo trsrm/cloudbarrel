@@ -1,6 +1,6 @@
 # Roadmap
 
-This roadmap orders work by risk for the open-source CloudBarrel product. A phase ends when its stop condition is met; later phases must not be pulled forward for appearance.
+This roadmap orders work by risk for the CloudBarrel project. A phase ends when its stop condition is met; later phases must not be pulled forward for appearance.
 
 ## Phase 0 — preserve the prototype
 

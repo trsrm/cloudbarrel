@@ -1,12 +1,28 @@
+<p align="center">
+  <img src="docs/assets/cloudbarrel-logo.png" alt="CloudBarrel" width="360">
+</p>
+
 # CloudBarrel
 
 **Bring your cloud data home.**
 
-CloudBarrel is a planned open-source, self-hosted backup product for keeping independent, versioned local copies of data from consumer cloud services. It targets ordinary Linux machines and home servers, with optional integrations for OpenMediaVault, CasaOS, and constrained routers.
+CloudBarrel is a planned open-source, self-hosted backup tool for keeping independent, versioned local copies of data from consumer cloud services. It targets ordinary Linux machines and home servers, with optional integrations for OpenMediaVault, CasaOS, and constrained routers.
 
 CloudBarrel is currently a documentation-first project. There is no installable release yet.
 
 ## Why it exists
+
+Three failures that already happened, none of them unusual:
+
+> My Threads account was locked by mistake. Support sent a data-export link that only works from inside the account I can no longer sign in to. The data is still there. I just cannot reach it.
+
+> The Google Sheet where I track my finances silently reverted to a state from months earlier. No revision history, no explanation. Days of retyping.
+
+> Several years of my childhood photos no longer exist anywhere. There was one copy, and one copy is all it takes.
+
+All three have the same cause: one copy, held by someone else. Accounts get locked, sync bugs overwrite files, support does not reply. A few lost documents can be retyped. Several years of photos cannot.
+
+Exporting by hand does not solve it. 700 GB of iCloud Photos is days of supervised downloads, so the task stays on the to-do list instead of getting done. CloudBarrel is set up once and then runs on its own.
 
 Cloud storage is not an independent backup. An account can be locked, deleted, corrupted, or made unavailable. CloudBarrel is intended to copy data to storage that the user controls and to prove that the copy can be restored.
 
@@ -40,7 +56,7 @@ Host integrations: plain Linux · OpenMediaVault · CasaOS · router-lite
 
 The core must remain independent of any NAS dashboard. Platform integrations expose the same backup behavior through the host's normal controls.
 
-This repository contains the complete open-source CloudBarrel product. External local applications may use the CloudBarrel interface, but they must not be required for backup correctness or for reading and restoring stored data.
+This repository contains all of CloudBarrel, and it is complete on its own. External local applications may use the CloudBarrel interface, but they must not be required for backup correctness or for reading and restoring stored data.
 
 ## Status
 

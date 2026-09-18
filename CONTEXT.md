@@ -75,3 +75,7 @@ _Avoid_: Default platform, primary UI
 **Constrained deployment**:
 A best-effort installation on hardware where memory, CPU, operating system, or storage tooling limits supported behavior.
 _Avoid_: Router edition, lite core
+
+**Product**:
+Reserved for the commercial offering built on top of CloudBarrel. CloudBarrel itself is a project, a tool, or a core, never "the product".
+_Avoid_: Using "product" for this repository or its scope
